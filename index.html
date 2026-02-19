@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend-ui-project</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="auth-container">
+        <!-- Seção de autenticação de conta (tela inicial) -->
+        <section class="autenticacao" style="display: flex">
+          <form>
+            <!--Inicio de saudação-->
+            <h1>Login</h1>
+            <h2>Que bom ter você por aqui!</h2>
+            <!--Formulário de entrada de site-->
+
+            <div class="input-box">
+              <!--Campo de e-mail-->
+              <input
+                type="email"
+                id="email_login"
+                name="email-login"
+                placeholder="E-mail ou Nome de Usuário"
+              />
+              <i class="fa-regular fa-envelope"></i>
+              <span class="error email-error" style="display: none"
+                >E-mail não corresponde a nenhuma conta</span
+              >
+            </div>
+
+            <!--Campo de senha-->
+            <div class="input-box">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                id="senha_login"
+                name="senha-login"
+                placeholder="Senha"
+              />
+              <span class="error senha-error" style="display: none"
+                >Senha Incorreta</span
+              >
+            </div>
+
+            <!-- Campo de relembrar o login -->
+            <div class="manter-conectado">
+              <label>
+                <input type="checkbox" class="manter-login" />
+                Manter Conectado
+              </label>
+              <!--Links para outros formulários-->
+              <a href="#" class="esqueci-senha">Esqueci Minha Senha</a>
+            </div>
+
+            <!--Botão de entrada de site-->
+            <button type="submit" class="btn-login">Entrar</button>
+
+            <div class="registrar-link">
+              <p>Não tem uma conta?<a href="#">Cadastre-se</a></p>
+            </div>
+          </form>
+
+          <div></div>
+        </section>
+
+        <!--Tela de cadastro de contas (Novos usuários)-->
+        <section class="cadastro" style="display: none">
+          <!--Título de tela-->
+          <h1>Crie sua Conta</h1>
+
+          <form id="form">
+            <div id="input_container">
+              <!--Campo de Nome-->
+              <div class="input-box">
+                <label for="name" class="form-label">Primeiro Nome</label>
+                <div class="input-field">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="Fulano"
+                  />
+                  <i class="fa-regular fa-user"></i>
+                </div>
+              </div>
+
+              <!--Campo de Sobrenome-->
+              <div class="input-box">
+                <label for="last_name" class="form-label">Último Nome</label>
+                <div class="input-field">
+                  <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    class="form-control"
+                    placeholder="De Tal"
+                  />
+                  <i class="fa-regular fa-user"></i>
+                </div>
+              </div>
+
+              <!--Campo de Nascimento-->
+              <div class="input-box">
+                <label for="birthdate" class="form-label">Nascimento</label>
+                <div class="input-field">
+                  <input
+                    type="date"
+                    id="birthdate"
+                    name="birthdate"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+
+              <!--Campo de E-mail-->
+              <div class="input-box">
+                <label for="email" class="form-label">E-mail</label>
+                <div class="input-field">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="exemplo@gmail.com"
+                  />
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+              </div>
+
+              <!--Campo de Senha-->
+              <div class="input-box">
+                <label for="password" class="form-label">Senha</label>
+                <div class="input-field">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    placeholder="*********"
+                  />
+                  <i class="fa-regular fa-eye-slash password-icon"></i>
+                </div>
+              </div>
+
+              <!--Confirmar Senha-->
+              <div class="input-box">
+                <label for="confirm_password" class="form-label"
+                  >Confirmar Senha</label
+                >
+                <div class="input-field">
+                  <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                    class="form-control"
+                    placeholder="*********"
+                  />
+                  <i class="fa-regular fa-eye-slash password-icon"></i>
+                </div>
+              </div>
+
+              <!--Gênero-->
+              <div class="radio-container">
+                <label class="form-label">Gênero</label>
+                <div id="gender_inputs">
+                  <div class="radio-box">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      class="form-control"
+                      value="female"
+                    />
+                    <label for="female" class="form-label">Feminino</label>
+                  </div>
+
+                  <div class="radio-box">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      class="form-control"
+                      value="male"
+                    />
+                    <label for="male" class="form-label">Masculino</label>
+                  </div>
+
+                  <div class="radio-box">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="other"
+                      class="form-control"
+                      value="other"
+                    />
+                    <label for="other" class="form-label">Outro</label>
+                  </div>
+                </div>
+              </div>
+
+              <!--Botão de cadastro-->
+              <div class="btn-cadastro">
+                <button type="submit">
+                  <i class="fa-solid fa-check"></i> Cadastrar
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!--Campo para quem já tem conta-->
+          <p>
+            Já tem uma conta?
+            <a href="#" class="voltar-login">Entrar</a>
+          </p>
+        </section>
+
+        <!--Tela de recuperação de senha-->
+        <section class="recuperacao-senha" style="display: none">
+          <form id="form_recuperacao" class="form-card">
+            <!-- Título -->
+            <h1>Esqueceu sua Senha?</h1>
+            <p>Informe seu e-mail para receber o link de redefinição.</p>
+
+            <!-- Campo de E-mail -->
+            <div class="input-box">
+              <label for="email-recuperacao" class="form-label">E-mail</label>
+              <div class="input-field">
+                <input
+                  type="email"
+                  id="email_recuperacao"
+                  name="email-recuperacao"
+                  class="form-control"
+                  placeholder="exemplo@gmail.com"
+                />
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <span class="msg msg-link-enviado" style="display: none">
+                Link Enviado! Verifique sua caixa de E-mail!</span
+              >
+            </div>
+
+            <!-- Botão -->
+            <div class="btn-cadastro">
+              <button type="submit" class="btn-enviar-link">Enviar Link</button>
+            </div>
+
+            <!-- Link de retorno -->
+            <p>Lembrou? <a href="#" class="voltar-login">Voltar ao Login</a></p>
+          </form>
+        </section>
+      </section>
+      <script src="/JS/script.js"></script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #8fe1b1, #7fb5f2);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* CSS DA TELA DE LOGIN */
+.autenticacao {
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  justify-content: right;
+  align-items: center;
+  border-radius: 12px;
+  color: #13284d;
+  padding: 30px 40px;
+  box-shadow: 7px 10px 31px 10px rgba(28, 94, 124, 0.44);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.autenticacao h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -15px;
+}
+
+.autenticacao h2 {
+  font-size: 18px;
+  line-height: 15px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: -15px;
+}
+
+.autenticacao .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.autenticacao .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0px 0px 0px;
+}
+
+.autenticacao .input-box input {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  border: 1px solid rgb(168, 166, 166);
+  outline: none;
+  font-size: 16px;
+  padding: 20px 45px 20px 55px;
+}
+
+.autenticacao .input-box input::placeholder {
+  font-size: 13px;
+}
+
+.autenticacao .input-box i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+}
+
+.autenticacao .manter-conectado {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: 35px 0 15px 0px;
+}
+
+.autenticacao .manter-conectado label input {
+  accent-color: white;
+  margin-right: 5px;
+}
+
+.autenticacao .manter-conectado a {
+  text-decoration: none;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.autenticacao .manter-conectado a:hover {
+  text-decoration: underline;
+}
+
+.autenticacao .btn-login {
+  margin-left: 50%;
+  transform: translatex(-50%);
+  width: 50%;
+  height: 40px;
+  background: linear-gradient(to right, #8fe1b1, #7fb5f2);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.autenticacao .btn-login:hover {
+  background: linear-gradient(to right, #7fb5f2, #8fe1b1);
+}
+
+.autenticacao .registrar-link {
+  font-size: 13px;
+  text-align: center;
+  margin: 10px 0 40px 0px;
+}
+
+.autenticacao .registrar-link a {
+  text-decoration: none;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.autenticacao .registrar-link a:hover {
+  text-decoration: underline;
+}
+
+/* CSS DA TELA DE CADASTRO */
+
+.cadastro {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #1f1f1f;
+}
+
+.cadastro h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #13284d;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.cadastro h1::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #6366f1;
+  border-radius: 8px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#input_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.input-field input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-field i {
+  color: #6366f1;
+  font-size: 16px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.radio-container {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#gender_inputs {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.form-control[type="radio"] {
+  accent-color: #6366f1;
+}
+
+.btn-cadastro {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cadastro button {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #8fe1b1, #7fb5f2);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-cadastro button:hover {
+  background: linear-gradient(to right, #7fb5f2, #8fe1b1);
+}
+
+.cadastro p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.cadastro p a {
+  color: #6366f1;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cadastro p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  #input_container {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-cadastro button {
+    width: 100%;
+  }
+}
+
+/* CSS DA TELA DE RECUPERAÇÃO DE SENHA */
+.recuperacao-senha {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.recuperacao-senha .msg {
+  color: green;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.form-card {
+  background-color: #ffffff;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-card h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #13284d;
+}
+
+.form-card p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.input-box {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.recuperacao-senha .input-field .enviado {
+  border: 1px solid green;
+}
+
+.recuperacao-senha .input-field {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgb(168, 166, 166);
+  background-color: #f9f9f9;
+  padding: 12px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.input-field input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-field i {
+  color: #999;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.btn-cadastro {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cadastro button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #8fe1b1, #7fb5f2);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-cadastro button:hover {
+  background: linear-gradient(to right, #7fb5f2, #8fe1b1);
+}
+
+.form-card a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-card a:hover {
+  text-decoration: underline;
+}
